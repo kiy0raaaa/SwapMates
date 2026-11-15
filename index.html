@@ -1,37 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwapMates - Jual Beli Barang Preloved</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#f8e9b3">
+    <meta name="description" content="Temukan barang preloved berkualitas dari mahasiswa sekitar kampus. Belanja lebih hemat dan jual barangmu dengan mudah di SwapMates.">
+    <title>SwapMates — Preloved Hemat untuk Mahasiswa</title>
+    <link rel="icon" type="image/png" href="assets/images/vector.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <container>
-        <nav class="navbar">
-            <a class="logo" href="index.html">SwapMates</a>
-            <div class="menu">
-                <a href="index.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="nearby.html">Nearby</a>
-                <a href="about.html">About</a>
-            </div>
-            <div class="actions">
-                <button class="button" type="button" onclick="window.location.href='post.html'">+ Post Item</button>
-                <img class="notification-icon" src="notification-icon.png" alt="Notification Icon">
-                <img class="profile-icon" src="profile-icon.png" alt="Profile Icon">
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigasi utama">
+            <a class="brand" href="#home" aria-label="SwapMates, kembali ke beranda">
+                <img class="brand-logo" src="assets/images/vector.png" alt="">
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Buka menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="menu" id="primary-menu">
+                <a href="#benefits">Kenapa SwapMates</a>
+                <a href="#categories">Kategori</a>
+                <a href="#products">Barang hemat</a>
+                <a href="#community">Komunitas</a>
+                <div class="menu-tools">
+                    <button class="tool-button wishlist-filter" type="button" aria-pressed="false" aria-label="Tampilkan daftar incaran">
+                        <span aria-hidden="true">♡</span> Incaran <b id="wishlist-count">0</b>
+                    </button>
+                    <button class="tool-button" type="button" data-open-tracker>Hematanku</button>
+                    <button class="tool-button theme-toggle" type="button" aria-label="Aktifkan tema gelap" aria-pressed="false">☾</button>
+                    <button class="button button-small button-dark menu-cta" type="button" data-open-listing>+ Jual barang</button>
+                </div>
             </div>
         </nav>
-        <div class="hero">
-            <div class="copywriting">
-                <p>Platform Preloved Khusus Mahasiswa</p>
-                <h1>Dompet Aman, Kos Nyaman, Kuliah Lancar Tanpa Boros.</h1>
-                <h4>Temukan buku, alat kuliah, dan perlengkapan kos preloved berkualitas dari sesama mahasiswa di sekitarmu. Jual barang tak terpakai, hemat pengeluaran bulanan.</h4>
+    </header>
+
+    <main>
+        <section class="hero section-shell" id="home">
+            <div class="hero-inner container">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span aria-hidden="true">🌿</span> Platform preloved khusus mahasiswa</p>
+                    <h1>Dompet aman,<br><span>kos nyaman,</span><br>kuliah lancar tanpa boros.</h1>
+                    <p class="hero-description">Temukan buku, alat kuliah, dan perlengkapan kos preloved berkualitas dari sesama mahasiswa di sekitarmu. Jual barang tak terpakai, hemat pengeluaran bulanan.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#products">Jelajahi barang hemat <span aria-hidden="true">↗</span></a>
+                        <button class="button button-outline" type="button" data-open-listing><span aria-hidden="true">＋</span> Jual barang saya</button>
+                    </div>
+                    <div class="hero-note">
+                        <span class="avatar-stack" aria-hidden="true"><i>👩🏻‍🎓</i><i>👨🏽‍🎓</i><i>👩🏾‍🎓</i></span>
+                        <span>Belanja dan jualan bareng teman kampus.</span>
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-label="Pratinjau barang preloved di SwapMates">
+                    <div class="art-orbit orbit-one"></div>
+                    <div class="art-orbit orbit-two"></div>
+                    <div class="art-sticker sticker-leaf" aria-hidden="true">🌱</div>
+                    <div class="art-sticker sticker-sparkle" aria-hidden="true">✦</div>
+                    <div class="market-card">
+                        <div class="market-topline">
+                            <span class="market-brand"><span class="mini-mark">S</span> Temuan dekatmu</span>
+                            <span class="online-dot">●</span>
+                        </div>
+                        <div class="market-search"><span aria-hidden="true">⌕</span> Cari kebutuhan kuliahmu</div>
+                        <div class="market-feature">
+                            <div class="market-product-image" aria-hidden="true">🧮</div>
+                            <div class="market-product-copy">
+                                <span class="tiny-label">PILIHAN HARI INI</span>
+                                <strong>Kalkulator saintifik</strong>
+                                <span class="market-price">Rp75.000 <del>Rp180.000</del></span>
+                            </div>
+                        </div>
+                        <div class="market-footer"><span>📍 Pogung Kidul</span><span class="save-pill">Hemat 58%</span></div>
+                    </div>
+                    <div class="floating-note note-top"><span class="note-icon">♻️</span><span><strong>Barang berputar</strong><small>Manfaatnya berlanjut</small></span></div>
+                    <div class="floating-note note-bottom"><span class="note-icon note-coin">↘</span><span><strong>Harga makin ramah</strong><small>Dompet tetap aman</small></span></div>
+                    <div class="hero-caption">Barang bagus, cerita baru.</div>
+                </div>
             </div>
-            <div class="vector">
-                <img src="vector.png" alt="Vector Image">
+            <div class="hero-bottom container">
+                <span>Teman baik untuk</span>
+                <span class="campus-name">📚 kebutuhan kuliah</span>
+                <span class="campus-name">🏡 kebutuhan kos</span>
+                <span class="campus-name">♻️ hidup berkelanjutan</span>
+            </div>
+        </section>
+
+        <section class="section benefits-section" id="benefits">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Kenapa SwapMates?</p>
+                    <h2>Lebih hemat, lebih dekat,<br><span>lebih berarti.</span></h2>
+                    <p>Semua yang mahasiswa butuhkan, tanpa harus bikin dompet menjerit.</p>
+                </div>
+                <div class="benefit-grid">
+                    <article class="benefit-card">
+                        <span class="benefit-icon icon-green" aria-hidden="true">↘</span>
+                        <h3>Hemat dompet hingga 70%</h3>
+                        <p>Dapatkan buku teks, modul, dan alat praktikum layak pakai dengan harga jauh lebih ramah di kantong mahasiswa.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <span class="benefit-icon icon-peach" aria-hidden="true">⌖</span>
+                        <h3>Dekat kampus &amp; kos</h3>
+                        <p>Cari barang dari area Sendowo, Pogung, Karangmalang, dan sekitarnya. COD praktis tanpa ongkir mahal.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <span class="benefit-icon icon-lilac" aria-hidden="true">♻</span>
+                        <h3>Sirkular &amp; bebas ribet</h3>
+                        <p>Ubah barang menumpuk di kamar kos jadi uang tambahan. Pasang iklan cepat, barangmu bisa berguna lagi.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section category-section" id="categories">
+            <div class="container">
+                <div class="section-heading section-heading-row">
+                    <div>
+                        <p class="eyebrow">Cari sesuai kebutuhan</p>
+                        <h2>Mulai dari <span>kategori favorit.</span></h2>
+                    </div>
+                    <a class="text-link" href="#products">Lihat pilihan barang <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="category-grid">
+                    <a class="category-card category-books" href="#products" data-category-link="books">
+                        <span class="category-emoji" aria-hidden="true">📚</span>
+                        <span class="category-text"><strong>Buku &amp; modul kuliah</strong><small>Teman belajar, harga bersahabat</small></span>
+                        <span class="category-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="category-card category-tech" href="#products" data-category-link="electronics">
+                        <span class="category-emoji" aria-hidden="true">💻</span>
+                        <span class="category-text"><strong>Elektronik &amp; periferal</strong><small>Mouse, stand laptop, dan lainnya</small></span>
+                        <span class="category-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="category-card category-dorm" href="#products" data-category-link="dorm">
+                        <span class="category-emoji" aria-hidden="true">🛏️</span>
+                        <span class="category-text"><strong>Perlengkapan kos</strong><small>Bikin ruang kecil makin nyaman</small></span>
+                        <span class="category-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="category-card category-tools" href="#products" data-category-link="campus">
+                        <span class="category-emoji" aria-hidden="true">🎨</span>
+                        <span class="category-text"><strong>Atribut &amp; alat tugas</strong><small>Siap bantu tugas berikutnya</small></span>
+                        <span class="category-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section products-section" id="products">
+            <div class="container">
+                <div class="section-heading section-heading-row">
+                    <div>
+                        <p class="eyebrow">Dipilih buat kamu</p>
+                        <h2>Barang bagus, <span>harga pas.</span></h2>
+                        <p>Temuan preloved dari mahasiswa di sekitar kampus.</p>
+                    </div>
+                    <a class="text-link" href="#categories">Jelajahi kategori <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="catalog-tools">
+                    <label class="search-field" for="product-search">
+                        <span aria-hidden="true">⌕</span>
+                        <input id="product-search" type="search" placeholder="Cari nama barang..." autocomplete="off">
+                    </label>
+                    <div class="filter-grid">
+                        <label>Kategori
+                            <select id="filter-category">
+                                <option value="all">Semua kategori</option>
+                                <option value="books">Buku &amp; Modul</option>
+                                <option value="electronics">Elektronik</option>
+                                <option value="dorm">Perlengkapan Kos</option>
+                                <option value="campus">Atribut Kampus</option>
+                            </select>
+                        </label>
+                        <label>Area COD
+                            <select id="filter-area">
+                                <option value="all">Semua area</option>
+                                <option value="Pogung">Pogung</option>
+                                <option value="Sendowo">Sendowo</option>
+                                <option value="Karangmalang">Karangmalang</option>
+                                <option value="Klebengan">Klebengan</option>
+                            </select>
+                        </label>
+                        <label>Kondisi
+                            <select id="filter-condition">
+                                <option value="all">Semua kondisi</option>
+                                <option value="95">Like New</option>
+                                <option value="90">Minimal 90%</option>
+                                <option value="80">Minimal 80%</option>
+                            </select>
+                        </label>
+                        <label class="budget-filter" for="filter-budget">
+                            <span>Batas harga <output id="budget-label" for="filter-budget">Rp500.000</output></span>
+                            <input id="filter-budget" type="range" min="0" max="500000" step="10000" value="500000">
+                        </label>
+                    </div>
+                    <div class="catalog-toolbar">
+                        <p id="result-count" aria-live="polite"></p>
+                        <button class="text-button" id="reset-filters" type="button">Reset filter</button>
+                    </div>
+                </div>
+                <div class="product-grid" id="product-grid" aria-live="polite"></div>
+                <div class="empty-state" id="empty-state" hidden>
+                    <span aria-hidden="true">🔎</span>
+                    <h3>Barangnya belum ketemu</h3>
+                    <p>Coba ubah kata kunci atau longgarkan filternya.</p>
+                    <button class="button button-outline" id="empty-reset" type="button">Tampilkan semua barang</button>
+                </div>
+                <p class="sample-note">Produk contoh dan barang yang kamu unggah tersimpan di browser ini.</p>
+            </div>
+        </section>
+
+        <section class="community-section" id="community">
+            <div class="community-inner container">
+                <div class="community-heading">
+                    <p class="eyebrow eyebrow-light">Bareng-bareng lebih berdampak</p>
+                    <h2>Hemat kecil-kecilan,<br><span>dampaknya rame-rame.</span></h2>
+                    <p>Setiap barang yang berpindah tangan berarti satu kebutuhan terpenuhi dengan lebih hemat.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat"><strong>+1.200</strong><span>barang berhasil diputar</span></div>
+                    <div class="stat"><strong>Rp45 Juta+</strong><span>total penghematan mahasiswa</span></div>
+                    <div class="stat"><strong>98%</strong><span>puas bertransaksi lokal</span></div>
+                </div>
+                <figure class="testimonial">
+                    <span class="quote-mark" aria-hidden="true">“</span>
+                    <blockquote>Jual buku semester lalu langsung laku ke adik tingkat sekosan. Praktis banget!</blockquote>
+                    <figcaption><span class="testimonial-avatar" aria-hidden="true">R</span><span><strong>Rian</strong><small>Ilmu Komputer 2024</small></span></figcaption>
+                </figure>
+                <span class="community-decoration" aria-hidden="true">✳</span>
+            </div>
+        </section>
+
+        <section class="final-cta-section" id="final-cta">
+            <div class="final-cta container">
+                <div class="cta-icon" aria-hidden="true">📦</div>
+                <p class="eyebrow">Kasih barangmu kesempatan kedua</p>
+                <h2>Punya barang menumpuk<br>di kamar kos?</h2>
+                <p>Jangan dibuang atau dibiarkan berdebu. Jual sekarang dan bantu teman seangkatanmu berhemat!</p>
+                <button class="button button-primary" type="button" data-open-listing>Mulai jual sekarang <span aria-hidden="true">↗</span></button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <div class="container footer-main">
+            <div class="footer-brand">
+                <a class="brand" href="#home" aria-label="SwapMates, kembali ke beranda">
+                    <img class="brand-logo" src="assets/images/vector.png" alt="">
+                </a>
+                <p>Barang baik, harga bersahabat.<br>Teman hemat mahasiswa sekitar kampus.</p>
+            </div>
+            <div class="footer-links">
+                <a href="pages/about.html">Tentang kami</a>
+                <a href="pages/categories.html">Kategori barang</a>
+                <a href="pages/nearby.html">Area sekitar</a>
+                <a href="pages/post.html">Jual barang</a>
+                <a href="mailto:halo@swapmates.id">Bantuan</a>
+                <a href="pages/terms.html">Syarat &amp; ketentuan</a>
+                <a href="pages/privacy.html">Privasi</a>
             </div>
         </div>
-    </container>
+        <div class="container footer-bottom">
+            <span>© 2026 SwapMates. Dibuat untuk mahasiswa.</span>
+            <a href="#home">Kembali ke atas ↑</a>
+        </div>
+    </footer>
+
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="detail-title">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Tutup detail">×</button>
+        <div class="product-detail-grid">
+            <div class="detail-gallery">
+                <div class="detail-visual" id="detail-visual"></div>
+                <div class="gallery-thumbnails" id="detail-thumbnails"></div>
+            </div>
+            <div class="detail-copy">
+                <p class="eyebrow" id="detail-category"></p>
+                <h2 id="detail-title"></h2>
+                <div class="product-price"><strong id="detail-price"></strong><del id="detail-new-price"></del></div>
+                <p class="detail-savings" id="detail-savings"></p>
+                <p class="dialog-description" id="detail-description"></p>
+                <div class="detail-facts">
+                    <span id="detail-condition"></span>
+                    <span id="detail-location"></span>
+                </div>
+                <div class="seller-card">
+                    <span class="seller-avatar" id="seller-avatar">S</span>
+                    <span><strong id="seller-name"></strong><small id="seller-course"></small></span>
+                </div>
+                <div class="offer-box">
+                    <strong>Ajukan penawaran</strong>
+                    <span class="offer-buttons">
+                        <button class="button button-outline" type="button" data-offer="5000">−Rp5.000</button>
+                        <button class="button button-outline" type="button" data-offer="10000">−Rp10.000</button>
+                    </span>
+                </div>
+                <div class="detail-actions">
+                    <button class="button button-outline" type="button" data-detail-chat>Hubungi penjual</button>
+                    <button class="button button-primary" type="button" data-detail-buy>Simulasikan beli</button>
+                    <button class="button button-primary" type="button" data-detail-sold hidden>Tandai terjual</button>
+                </div>
+                <p class="simulation-note">Transaksi dan chat adalah simulasi lokal untuk demo front-end.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="app-dialog listing-dialog" id="listing-dialog" aria-labelledby="listing-title">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Tutup form">×</button>
+        <p class="eyebrow">Bikin barangmu berguna lagi</p>
+        <h2 id="listing-title">Pasang barang preloved</h2>
+        <p class="dialog-intro">Isi detail singkat. Barangmu langsung muncul di etalase browser ini.</p>
+        <form id="listing-form" class="listing-form">
+            <label class="upload-control" for="listing-image">
+                <span class="upload-icon" aria-hidden="true">＋</span>
+                <span><strong>Pilih foto barang</strong><small>Maks. 3 foto · total 2 MB</small></span>
+                <img id="listing-preview" alt="Pratinjau foto barang" hidden>
+                <input id="listing-image" type="file" accept="image/*" multiple required>
+            </label>
+            <div class="form-grid">
+                <label class="form-wide" for="listing-name">Nama barang
+                    <input id="listing-name" name="name" type="text" maxlength="70" placeholder="Contoh: Kalkulator saintifik Casio" required>
+                </label>
+                <label for="listing-category">Kategori
+                    <select id="listing-category" name="category" required>
+                        <option value="books">Buku &amp; Modul</option>
+                        <option value="electronics">Elektronik</option>
+                        <option value="dorm">Perlengkapan Kos</option>
+                        <option value="campus">Atribut Kampus</option>
+                    </select>
+                </label>
+                <label for="listing-condition">Kondisi
+                    <select id="listing-condition" name="condition" required>
+                        <option value="95">Like New · 95%</option>
+                        <option value="90">90%</option>
+                        <option value="80">80%</option>
+                    </select>
+                </label>
+                <label for="listing-price">Harga jual
+                    <input id="listing-price" name="price" type="number" min="1000" step="1000" placeholder="75000" required>
+                </label>
+                <label for="listing-new-price">Estimasi harga baru
+                    <input id="listing-new-price" name="newPrice" type="number" min="1000" step="1000" placeholder="180000" required>
+                </label>
+                <label for="listing-location">Lokasi COD
+                    <select id="listing-location" name="location" required>
+                        <option value="Pogung">Pogung</option>
+                        <option value="Sendowo">Sendowo</option>
+                        <option value="Karangmalang">Karangmalang</option>
+                        <option value="Klebengan">Klebengan</option>
+                    </select>
+                </label>
+                <label for="listing-seller">Nama penjual
+                    <input id="listing-seller" name="seller" type="text" maxlength="40" placeholder="Nama panggilan" required>
+                </label>
+                <label for="listing-seller-course">Program studi / angkatan
+                    <input id="listing-seller-course" name="course" type="text" maxlength="50" placeholder="Contoh: Ilmu Komputer '24" required>
+                </label>
+                <label class="form-wide" for="listing-description">Deskripsi kondisi barang
+                    <textarea id="listing-description" name="description" rows="3" maxlength="300" placeholder="Ceritakan kondisi, kelengkapan, atau minus barang dengan jujur." required></textarea>
+                </label>
+            </div>
+            <p class="listing-savings" id="listing-savings" aria-live="polite">Masukkan harga jual dan harga baru untuk melihat estimasi hemat.</p>
+            <p class="form-feedback" id="listing-feedback" role="status"></p>
+            <button class="button button-primary form-submit" type="submit">Pasang barang <span aria-hidden="true">↗</span></button>
+        </form>
+    </dialog>
+
+    <dialog class="app-dialog dashboard-dialog" id="tracker-dialog" aria-labelledby="tracker-title">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Tutup ringkasan">×</button>
+        <p class="eyebrow">Ringkasan pribadi</p>
+        <h2 id="tracker-title">Hematanku di SwapMates</h2>
+        <p class="dialog-intro">Catatan transaksi simulasi disimpan di browser ini.</p>
+        <div class="tracker-grid">
+            <article class="tracker-card tracker-saved">
+                <span aria-hidden="true">↘</span>
+                <small>Total hemat dari belanja</small>
+                <strong id="tracker-savings">Rp0</strong>
+                <span id="tracker-purchases">0 barang dibeli</span>
+            </article>
+            <article class="tracker-card tracker-income">
+                <span aria-hidden="true">＋</span>
+                <small>Pemasukan dari barang terjual</small>
+                <strong id="tracker-income">Rp0</strong>
+                <span id="tracker-sales">0 barang terjual</span>
+            </article>
+        </div>
+    </dialog>
+
+    <dialog class="app-dialog chat-dialog" id="chat-dialog" aria-labelledby="chat-title">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Tutup chat">×</button>
+        <p class="eyebrow">Obrolan COD</p>
+        <h2 id="chat-title">Chat penjual</h2>
+        <p class="dialog-intro" id="chat-product"></p>
+        <div class="chat-log" id="chat-log" aria-live="polite"></div>
+        <form class="chat-form" id="chat-form">
+            <label class="sr-only" for="chat-message">Tulis pesan</label>
+            <input id="chat-message" type="text" maxlength="240" placeholder="Tulis pesan..." autocomplete="off" required>
+            <button class="button button-primary" type="submit">Kirim</button>
+        </form>
+        <p class="simulation-note">Balasan otomatis hanya simulasi, bukan pesan sungguhan.</p>
+    </dialog>
+
+    <div class="app-status" id="app-status" role="status" aria-live="polite"></div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
