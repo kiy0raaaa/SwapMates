@@ -159,9 +159,3 @@ Tidak ada perintah **npm install**, **npm run dev**, atau **npm run build** yang
 
 - **Live Demo:** [swapmates.vercel.app](https://swapmates.vercel.app)
 - **GitHub Repository:** [kiy0raaaa/SwapMates](https://github.com/kiy0raaaa/SwapMates)
-
----
-
-<p align="center">
-  Dibuat oleh Tim <b>MUHA</b> 🎓
-</p>
