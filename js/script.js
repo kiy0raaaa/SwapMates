@@ -705,39 +705,6 @@ listingForm.addEventListener('submit', (event) => {
         return;
     }
 
-    const category = document.querySelector('#listing-category').value;
-    const location = document.querySelector('#listing-location').value;
-    const product = {
-        id: `user-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
-        name: document.querySelector('#listing-name').value.trim(),
-        category,
-        price,
-        newPrice,
-        condition: Number(document.querySelector('#listing-condition').value),
-        location,
-        distance: { Pogung: 500, Sendowo: 700, Karangmalang: 900, Klebengan: 1100 }[location],
-        description: document.querySelector('#listing-description').value.trim(),
-        seller: document.querySelector('#listing-seller').value.trim(),
-        course: document.querySelector('#listing-seller-course').value.trim(),
-        images: selectedPhotoData,
-        emoji: { books: '📚', electronics: '💻', dorm: '🛏️', campus: '🎓' }[category],
-        visual: `visual-${category}`,
-        isOwn: true
-    };
-
-    if (saveState({ ...appState, products: [...appState.products, product] })) {
-        listingDialog.close();
-        listingForm.reset();
-        selectedPhotoData = [];
-        listingPreview.removeAttribute('src');
-        listingPreview.hidden = true;
-        updateListingSavings();
-        render();
-        announce(`${product.name} berhasil ditambahkan ke etalase.`);
-        document.querySelector('#products').scrollIntoView({ behavior: 'smooth' });
-    } else {
-        listingFeedback.textContent = 'Barang belum ditambahkan karena penyimpanan browser penuh atau tidak tersedia.';
-    }
 });
 
 listingDialog.addEventListener('close', () => {
