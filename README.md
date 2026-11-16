@@ -49,6 +49,10 @@ Tidak menggunakan React, Vue, Angular, Tailwind CSS, Bootstrap, Vite, maupun pro
 ## 🏗️ Struktur Proyek
 
     SwapMates/
+    ├── .gitattributes
+    ├── .vscode/
+    │   └── settings.json
+    │
     ├── assets/
     │   ├── icons/
     │   │   ├── notification-icon.png
@@ -63,6 +67,7 @@ Tidak menggunakan React, Vue, Angular, Tailwind CSS, Bootstrap, Vite, maupun pro
     │   └── script.js
     │
     ├── pages/
+    │   ├── .gitkeep
     │   ├── about.html
     │   ├── categories.html
     │   ├── nearby.html
