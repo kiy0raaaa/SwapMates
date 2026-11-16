@@ -153,7 +153,6 @@ Tidak ada perintah **npm install**, **npm run dev**, atau **npm run build** yang
 - Pembelian bukan transaksi sungguhan dan tidak melibatkan pembayaran.
 - Lokasi serta jarak produk merupakan informasi contoh, bukan hasil pelacakan GPS atau perhitungan radius secara langsung.
 - Belum tersedia autentikasi pengguna, API, backend, maupun database bersama.
-- Proses submit form untuk menambahkan produk ke katalog masih dalam tahap pengembangan.
 
 ## 🔗 Tautan
 
