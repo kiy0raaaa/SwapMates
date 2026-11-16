@@ -30,8 +30,6 @@ Proyek ini merupakan **prototipe front-end berbasis browser**. Interaksi katalog
 - **Halaman informasi:** menyediakan halaman Tentang Kami, Kategori, Area Sekitar, Jual Barang, Privasi, dan Syarat & Ketentuan.
 - **Responsive layout:** menyesuaikan tampilan untuk perangkat desktop maupun mobile.
 
-> **Catatan status fitur:** Form jual barang dan pemilihan foto sudah memiliki antarmuka, pratinjau, serta validasi dasar. Namun, proses submit untuk menambahkan produk ke katalog belum selesai diimplementasikan. Karena itu, fitur unggah barang belum dapat dianggap berfungsi sepenuhnya.
-
 ## 🛠️ Teknologi
 
 SwapMates dibuat tanpa framework maupun library UI.
@@ -43,8 +41,6 @@ SwapMates dibuat tanpa framework maupun library UI.
 | **Vanilla JavaScript** | Manipulasi DOM, event handling, filter katalog, dan interaksi aplikasi |
 | **Web Storage API (localStorage)** | Menyimpan preferensi tema, wishlist, dan status transaksi simulasi di browser |
 | **Vercel** | Deployment website statis |
-
-Tidak menggunakan React, Vue, Angular, Tailwind CSS, Bootstrap, Vite, maupun proses build berbasis Node.js.
 
 ## 🏗️ Struktur Proyek
 
