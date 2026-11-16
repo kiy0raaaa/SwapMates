@@ -1,76 +1,166 @@
 # 🌿 SwapMates
 
-> **Dompet Aman, Kos Nyaman, Kuliah Lancar Tanpa Boros.**  
-> Platform Jual-Beli Barang *Preloved* Khusus Mahasiswa Berbasis Radius Kos Terdekat.
+> **Dompet aman, kos nyaman, kuliah lancar tanpa boros.**  
+> Marketplace preloved berbasis web untuk membantu mahasiswa menemukan dan menawarkan barang kebutuhan kuliah maupun kos di sekitar kampus.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-swapmates.vercel.app-000000?style=for-the-badge&logo=vercel)](https://swapmates.vercel.app)
-[![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20Tailwind%20%7C%20Vite-blue?style=for-the-badge&logo=react)](https://github.com/kiy0raaaa/SwapMates)
+![HTML5](https://img.shields.io/badge/HTML5-vanilla-orange?style=for-the-badge&logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-vanilla-blue?style=for-the-badge&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-yellow?style=for-the-badge&logo=javascript)
 
 ---
 
-## 📌 Latar Belakang & Masalah
+## 📌 Tentang Proyek
 
-Mahasiswa sering kali menghadapi dilema finansial saat harus membeli kebutuhan akademik dan perlengkapan kos baru dengan harga yang tergolong tinggi. Di sisi lain, barang-barang layak pakai milik mahasiswa tingkat atas sering kali menumpuk di kamar kos setelah tidak lagi digunakan.
+Mahasiswa sering membutuhkan buku, alat kuliah, elektronik, dan perlengkapan kos dengan harga terjangkau. Pada saat yang sama, banyak barang yang masih layak pakai justru tidak lagi digunakan oleh pemiliknya.
 
-**SwapMates** hadir sebagai solusi berbasis ekonomi sirkular untuk mengoptimalkan gaya hidup dan efisiensi keuangan mahasiswa. Platform ini menghubungkan pembeli dan penjual di lingkungan kampus sekitar untuk bertransaksi barang *preloved* secara praktis tanpa ongkos kirim.
+**SwapMates** dibuat sebagai konsep marketplace preloved yang mempertemukan mahasiswa di sekitar kampus. Pengguna dapat melihat katalog barang, membandingkan harga, menyimpan barang incaran, dan melihat informasi area COD.
 
----
+Proyek ini merupakan **prototipe front-end berbasis browser**. Interaksi katalog dan beberapa data demo berjalan di sisi pengguna tanpa backend atau database.
 
-## ✨ Fitur Utama
+## ✨ Fitur
 
-- 🔍 **Pencarian & Filter Multi-Kriteria:** Saring barang berdasarkan kategori (*Buku & Modul*, *Elektronik & Periferal*, *Perlengkapan Kos*, *Atribut Kampus*), rentang harga, dan kondisi barang.
-- 📍 **Filter Radius Kos Terdekat (*Nearby*):** Cari produk di sekitar kawasan kos (Pogung, Sendowo, Karangmalang, dll.) untuk mempermudah transaksi langsung (*COD*).
-- 💰 **Kalkulator Penghematan Otomatis:** Menampilkan persentase dan nominal penghematan anggaran secara visual dibanding harga baru.
-- ➕ **Unggah Produk Cepat (*Post Item*):** Form interaktif untuk mengunggah detail barang bekas, foto, estimasi harga hemat, dan titik lokasi COD.
-- 💬 **Kontak Cepat Penjual:** Integrasi komunikasi langsung dengan penjual via tautan pesan / WhatsApp.
-- 📱 **Desain Responsif:** Antarmuka modern yang ramah pengguna baik di perangkat seluler maupun desktop.
+- **Katalog barang:** menampilkan produk contoh dari beberapa kategori, seperti buku dan modul, elektronik, perlengkapan kos, serta atribut kampus.
+- **Pencarian dan filter:** mencari nama barang serta menyaring berdasarkan kategori, area COD, kondisi, dan batas harga.
+- **Detail produk:** melihat deskripsi, harga, estimasi penghematan, kondisi, lokasi, serta informasi penjual.
+- **Daftar incaran:** menyimpan atau menghapus barang favorit menggunakan tombol wishlist.
+- **Tema terang dan gelap:** mengganti tampilan dan menyimpan preferensi tema di browser.
+- **Hematanku:** melihat ringkasan penghematan dan aktivitas transaksi simulasi.
+- **Simulasi chat dan transaksi:** mencoba alur percakapan, penawaran harga, dan pembelian tanpa menghubungkan layanan transaksi sungguhan.
+- **Halaman informasi:** menyediakan halaman Tentang Kami, Kategori, Area Sekitar, Jual Barang, Privasi, dan Syarat & Ketentuan.
+- **Responsive layout:** menyesuaikan tampilan untuk perangkat desktop maupun mobile.
 
----
+> **Catatan status fitur:** Form jual barang dan pemilihan foto sudah memiliki antarmuka, pratinjau, serta validasi dasar. Namun, proses submit untuk menambahkan produk ke katalog belum selesai diimplementasikan. Karena itu, fitur unggah barang belum dapat dianggap berfungsi sepenuhnya.
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Teknologi
 
-- **Frontend Framework:** React.js (Vite)
-- **Styling & UI:** Tailwind CSS
-- **Iconography:** Lucide React / React Icons
-- **Deployment Platform:** Vercel
+SwapMates dibuat tanpa framework maupun library UI.
 
----
+| Teknologi | Penggunaan |
+| --- | --- |
+| **HTML5** | Struktur halaman dan komponen antarmuka |
+| **CSS3** | Styling, layout, animasi, tema, dan responsive design |
+| **Vanilla JavaScript** | Manipulasi DOM, event handling, filter katalog, dan interaksi aplikasi |
+| **Web Storage API (localStorage)** | Menyimpan preferensi tema, wishlist, dan status transaksi simulasi di browser |
+| **Vercel** | Deployment website statis |
 
-## 🚀 Panduan Instalasi Lokal
+Tidak menggunakan React, Vue, Angular, Tailwind CSS, Bootstrap, Vite, maupun proses build berbasis Node.js.
 
-Untuk menjalankan proyek ini di komputer lokal:
+## 🏗️ Struktur Proyek
 
-1. **Kloning Repositori:**
-   ```bash
-   git clone https://github.com/kiy0raaaa/SwapMates.git
-   cd SwapMates
-   ```
+    SwapMates/
+    ├── assets/
+    │   ├── icons/
+    │   │   ├── notification-icon.png
+    │   │   └── profile-icon.png
+    │   └── images/
+    │       └── vector.png
+    │
+    ├── css/
+    │   └── style.css
+    │
+    ├── js/
+    │   └── script.js
+    │
+    ├── pages/
+    │   ├── about.html
+    │   ├── categories.html
+    │   ├── nearby.html
+    │   ├── post.html
+    │   ├── privacy.html
+    │   ├── terms.html
+    │   └── pages.css
+    │
+    ├── index.html
+    └── README.md
 
-2. **Install Dependensi:**
-   ```bash
-   npm install
-   ```
+### Penjelasan Struktur
 
-3. **Jalankan Server Pengembangan:**
-   ```bash
-   npm run dev
-   ```
-   Buka peramban dan akses `http://localhost:5173`.
+- **index.html** — halaman utama yang berisi katalog, hero section, kategori, informasi komunitas, dan dialog interaktif aplikasi.
+- **css/style.css** — stylesheet utama untuk layout, komponen, responsive design, dan tema.
+- **js/script.js** — pusat logika front-end, termasuk data produk contoh, rendering katalog, pencarian, filter, wishlist, dialog, serta simulasi interaksi.
+- **pages/** — kumpulan halaman HTML tambahan. File **pages.css** berisi styling khusus untuk halaman-halaman tersebut.
+- **assets/** — menyimpan file gambar dan ikon yang digunakan oleh antarmuka.
 
-4. **Build untuk Produksi:**
-   ```bash
-   npm run build
-   ```
+## ⚙️ Arsitektur Aplikasi
 
----
+SwapMates menggunakan pendekatan **client-side rendering sederhana dengan Vanilla JavaScript**. Struktur aplikasinya dibagi menjadi beberapa bagian:
 
-## 🔗 Tautan Penting
+1. **Presentation layer** — HTML menyediakan struktur halaman, sedangkan CSS mengatur tampilan dan responsivitas.
+2. **Interaction layer** — JavaScript menangani event pengguna, manipulasi DOM, rendering produk, pencarian, filter, dan dialog.
+3. **Data layer** — produk contoh didefinisikan langsung dalam **js/script.js**. Status wishlist, transaksi simulasi, dan preferensi tema disimpan pada **localStorage**.
+4. **Navigation layer** — halaman utama dan halaman informasi terpisah menggunakan tautan HTML biasa serta query parameter untuk membawa filter kategori atau area ke katalog.
 
-- **Live Web App:** [swapmates.vercel.app](https://swapmates.vercel.app)
-- **Repository GitHub:** [github.com/kiy0raaaa/SwapMates](https://github.com/kiy0raaaa/SwapMates)
+### Alur Aplikasi
+
+    index.html
+        │
+        ├── css/style.css
+        │
+        └── js/script.js
+              │
+              ├── Data produk contoh
+              ├── Render katalog ke DOM
+              ├── Search dan filter
+              ├── Wishlist
+              ├── Dialog dan simulasi interaksi
+              └── localStorage
+                     ├── Wishlist
+                     ├── Status transaksi demo
+                     └── Preferensi tema
+
+    pages/
+        ├── about.html
+        ├── categories.html
+        ├── nearby.html
+        ├── post.html
+        ├── privacy.html
+        └── terms.html
+
+**Tidak ada backend atau database eksternal.** Data demo disimpan secara lokal pada browser, sehingga tidak otomatis tersinkronisasi antarperangkat atau antar pengguna.
+
+## 🚀 Menjalankan Proyek Secara Lokal
+
+Karena proyek ini berupa website statis, kamu tidak perlu menginstal package atau menjalankan perintah build.
+
+1. **Clone repository**
+
+       git clone https://github.com/kiy0raaaa/SwapMates.git
+       cd SwapMates
+
+2. **Jalankan server lokal**
+
+   Jika Python 3 tersedia, jalankan:
+
+       python -m http.server 5500
+
+   Alternatifnya, buka folder proyek menggunakan VS Code dan jalankan melalui ekstensi **Live Server**.
+
+3. **Buka website**
+
+   Akses alamat berikut di browser:
+
+       http://localhost:5500
+
+Tidak ada perintah **npm install**, **npm run dev**, atau **npm run build** yang diperlukan.
+
+## ⚠️ Batasan Prototipe
+
+- Katalog menggunakan data produk contoh yang didefinisikan di JavaScript.
+- Wishlist dan status transaksi merupakan data lokal pada browser.
+- Chat hanya menampilkan simulasi percakapan dan balasan otomatis.
+- Pembelian bukan transaksi sungguhan dan tidak melibatkan pembayaran.
+- Lokasi serta jarak produk merupakan informasi contoh, bukan hasil pelacakan GPS atau perhitungan radius secara langsung.
+- Belum tersedia autentikasi pengguna, API, backend, maupun database bersama.
+- Proses submit form untuk menambahkan produk ke katalog masih dalam tahap pengembangan.
+
+## 🔗 Tautan
+
+- **Live Demo:** [swapmates.vercel.app](https://swapmates.vercel.app)
+- **GitHub Repository:** [kiy0raaaa/SwapMates](https://github.com/kiy0raaaa/SwapMates)
 
 ---
 
 <p align="center">
-  Dibuat oleh Tim <b>MUHA</b> untuk Mengoptimalkan Keuangan & Gaya Hidup Mahasiswa 🎓
+  Dibuat oleh Tim <b>MUHA</b> 🎓
 </p>
